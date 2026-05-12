@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #obox {
+            background-color: rgb(224, 224, 224);
+            margin-top: 20px;
+            border-radius: 3px solid black;
+            display: flex;
+            justify-content: center;
+            display: block;
+            padding-top: 15px;
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-bottom: 15px;
+            border-radius: 40px;
+        }
+
+        #inbox1 {
+            height: 40px;
+            border-radius: 40px;
+            padding-top: 15px;
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-bottom: 15px;
+            background-color: rgb(85, 220, 238);
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        #inbox2 {
+            height: 40px;
+            border-radius: 40px;
+            background-color: rgb(117, 225, 114);
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            padding-top: 15px;
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-bottom: 15px;
+        }
+
+        #inbox1:hover() {
+            box-shadow: 0cqi purple 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="obox">
+        <div id="inbox1">
+            <label>Enter Num1</label>
+            <input type="text" id="n1">
+
+            <label>Enter Num2</label>
+            <input type="text" id="n2">
+
+            <label>Enter Num3</label>
+            <input type="text" id="n3">
+        </div>
+        <br>
+
+        <div id="inbox2">
+            <select id="choice" onChange="funcase(this)">
+                <option selected="disabled">Operations</option>
+                <option value="a">ADD</option>
+                <option value="s">SUB</option>
+                <option value="m">MULTI</option>
+            </select>
+            <input id="result">
+        </div>
+
+
+    </div>
+
+    <script>
+        function funcase() {
+            var a = parseInt(document.getElementById("n1").value);
+            var b = parseInt(document.getElementById("n2").value);
+            var c = parseInt(document.getElementById("n3").value);
+
+            var i = document.getElementById("choice").value;
+
+            switch (i) {
+                case 'a':
+                    var sum = a + b + c;
+                    document.getElementById("result").value = ("sum is = " + sum);
+                    break;
+                case 's':
+                    var sub = a - b - c;
+                    document.getElementById("result").value = ("sub is = " + sub);
+                    break;
+                case 'm':
+                    var multi = a * b * c;
+                    document.getElementById("result").value = ("multi is = " + multi);
+                    break;
+                default:
+                    document.getElementById("result").value = ("This is Default Choice");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

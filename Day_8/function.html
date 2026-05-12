@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            color: black;
+        }
+
+        .b:hover {
+            box-shadow: 0em 0em 1em rgb(244, 12, 167);
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button">
+        <button class="b" onclick="sum()">ADD</button>
+        <button class="b" onclick="sub()">SUBTRACT</button>
+        <button class="b" onclick="multi()">MULTIPLY</button>
+        <button class="b" onclick="divide()">DIVIDE</button>
+    </div>
+
+    <script>
+
+
+        function sum() {
+            var a = prompt("Enter the value  A");
+            var b = prompt("Enter the value of B");
+            var c = parseInt(a) + parseInt(b);
+            alert("The sum is: " + c);
+        }
+
+        function sub() {
+            var a = prompt("Enter the value  A");
+            var b = prompt("Enter the value of B");
+            var c = parseInt(a) - parseInt(b);
+            alert("The difference is: " + c);
+        }
+
+        function multi() {
+            var a = prompt("Enter the value  A");
+            var b = prompt("Enter the value of B");
+            var c = parseInt(a) * parseInt(b);
+            alert("The product is: " + c);
+        }
+
+        function divide() {
+            var a = prompt("Enter the value  A");
+            var b = prompt("Enter the value of B");
+            var c = parseInt(a) / parseInt(b);
+            alert("The quotient is: " + c);
+        }
+    </script>
+</body>
+
+</html>

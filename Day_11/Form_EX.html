@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: aqua;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 align="center">Registration Form</h1>
+        <form method="post" onsubmit="return check()">
+            <h5 id="error"></h5>
+            <div align="center" id="box">
+
+                <table align="center">
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" id="name" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Username</td>
+                        <td><input type="text" id="username" name="username"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="pwd" id="pwd"></td>
+                    <tr>
+                        <td align="center">
+
+                            <button type="reset">Reset</button>
+                            <button onclick="return check()">Submit</button>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+    </div>
+    <script>
+        let name = document.getElementById("name").value;
+        let username = document.getElementById("username").value;
+        let pass = document.getElementById("pwd").value;
+
+        let flag = 1;
+        let message = "";
+        let m = [];
+
+        let namep = /^[a-zA-Z ]+$/;
+        let usernamep = /^[a-zA-Z0-9]+$/;
+        let pwdp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+        function check() {
+            if (name == "") {
+                m[0] = "name is required!";
+                flag = 0;
+            } else if (!namep.test(name)) {
+                m[0] = "char in b/w a-z and A-Z";
+                flag = 0;
+            } else {
+                m[0] = "";
+            }
+
+            if (pass == "") {
+                m[1] = "Password is required";
+                flag == 0;
+            } else if (!passp.test(pass)) {
+                m[1] = "Pass in b/w A-Za-a and 9,0";
+                flag = 0;
+            } else if (pass.length < 8) {
+                m[1] = "Pass length should be greator then eq to 8";
+                flag = 0;
+            } else {
+                m[1] = "";
+            }
+
+            if (username = "") {
+                m[2] = "Username is required";
+                flag = 0;
+            } else if (!usernamep.test(username)) {
+                m[2] = "Username in b/w A-Za-a and 9,0";
+            } else {
+                m[2] = "";
+            }
+
+
+            if (flag == 0) {
+                for (let i = 0; i < m.length; i++) {
+                    message += m[i] + "<br>";
+                }
+            }
+
+            document.getElementById("error").innerHTML = message;
+
+            return flag === 1;
+
+        }
+
+    </script>
+</body>
+
+</html>

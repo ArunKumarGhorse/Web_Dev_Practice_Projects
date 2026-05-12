@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="id">
+        <button onclick="check()">CHECK</button>
+    </div>
+    <script>
+        function check() {
+            var a = prompt("Enter the value of A");
+            if (a == 'A' || a == 'a' || a == 'E' || a == 'e' || a == 'I' || a == 'i' || a == 'O' || a == 'o' || a == 'U' || a == 'u') {
+                document.getElementById("id").innerHTML = "<h1>The value is Vowel</h1>";
+            }
+            else {
+                document.getElementById("id").innerHTML = "<h1>The value is Consonant</h1>";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

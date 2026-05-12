@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    enter the name<input type="text" id="i1" placeholder="username">
+    <br><br>
+    enter the password<input type="password" id="i2">
+
+    <button id="x" onclick="show()">Show Password</button>
+    <button id="y" onclick="hide()">Hide Password</button>
+    <br>
+    <button>Login</button>
+
+    <script>
+        function show() {
+            document.getElementById("i2").type = "text";
+        }
+
+        function hide() {
+            document.getElementById("i2").type = "password";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIMATON</title>
+    <style>
+        #p {
+            height: 200px;
+            width: 200px;
+            background-color: palevioletred;
+            padding: 5px;
+            margin: 5px;
+            box-shadow: 5px 5px 5px rgb(0, 32, 128);
+            border: 2px solid black;
+            animation: colorchange 5s infinite;
+            position: absolute; 
+        }
+
+        @keyframes colorchange {
+            0% {
+                background-color: purple;
+                box-shadow: 5px 5px 5px chocolate;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: gray;
+                box-shadow: 5px 5px 5px greenyellow;
+                left: 300px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: gold;
+                box-shadow: 5px 5px 5px blue;
+                left: 300px;
+                top: 300px;
+            }
+
+            75% {
+                background-color: blue;
+                box-shadow: 5px 5px 5px red;
+                left: 0px;
+                top: 300px;
+            }
+
+            100% {
+                background-color: red;
+                box-shadow: 5px 5px 5px purple;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="p">
+
+    </div>
+</body>
+
+</html>

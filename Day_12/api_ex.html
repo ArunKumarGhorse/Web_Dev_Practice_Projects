@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        async function mydata() {
+            let response = await fetch('https://jsonplaceholder.typicode.com/todos');
+            let result = await response.json();
+            for (var i = 0; i <= result.length; i++) {
+                document.getElementById("data").innerHTML += `<tr>
+                    <td>${result[i].userId}</td>
+                    <td>${result[i].id}</td>
+                    <td>${result[i].title}</td>
+                    <td>${result[i].completed}</td>
+                    </tr>`
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="mydata()">Get Data</button>
+    <table style="border:2px solid red">
+        <thead>
+            <tr>
+                <th>userid</th>
+                <th>id</th>
+                <th>title</th>
+                <th>status</th>
+            </tr>
+        </thead>
+        <tbody id="data">
+
+        </tbody>
+    </table>
+
+</body>
+
+</html>

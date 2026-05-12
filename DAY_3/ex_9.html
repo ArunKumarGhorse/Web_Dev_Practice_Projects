@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX_9</title>
+</head>
+
+<body background="/images/office.jpg" background-repeat="no-repeat">
+    <form method="post" action="script.html"
+        style="background-color: lightblue; width:50%;margin: auto; padding: 20px; border-radius: 10px;">
+        <fieldset>
+            <legend>
+                Employee Registraion Form
+            </legend>
+            <table align="center">
+                <tr>
+                    <td>
+                        <input type="radio" value="x" name="m"> Mr.
+                        <input type="radio" value="y" name="m">Mrs.
+                        <input type="radio" value="z" name="m">Ms.
+                    </td>
+                </tr>
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" name="lname" placeholder="First Name"></td>
+                </tr>
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" name="lname" placeholder="Last Name"></td>
+                </tr>
+                <tr>
+                    <td>Date of joining:</td>
+                    <td><input type="date" name="date"></td>
+                </tr>
+                <tr>
+                    <td>Mail Address 1:</td>
+                    <td><input type="text" name="ad1"></td>
+                </tr>
+                <tr>
+                    <td>Mail Address 2:</td>
+                    <td><input type="text" name="ad"></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td><input type="text" name="city"></td>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td><select name="state">
+                            <option value="" selected disabled>Select State</option>
+                            <option value="MP">MP</option>
+                            <option value="UP">UP</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>Zip</td>
+                    <td><input type="text" name="zip"></td>
+                </tr>
+                <tr>
+                    <td>Upload Photo</td>
+                    <td><input type="file" name="pic"></td>
+                </tr>
+                <tr>
+                    <td>E-Mail</td>
+                    <td><input type="mail" name="mail"></td>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td><input type="tel" name="tel" placeholder="+91"></td>
+                </tr>
+                <tr>
+                    <td>Language Known</td>
+                    <td>
+                        <input type="checkbox" name="Language" value="Hindi">Hindi<br>
+                        <input type="checkbox" name="Language" value="Gujrati">Gujrati<br>
+                        <input type="checkbox" name="Language" value="English">English
+                    </td>
+                </tr>
+                <tr>
+                    <td>Additional Information: </td>
+                    <td><textarea>Optional</textarea></td>
+                </tr>
+                <tr>
+                    <td><input type="submit"></td>
+                    <td><input type="reset"></td>
+                </tr </table>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="p1">SISTEC GN</h1>
+    <h1 class="p1">SISTEC RB</h1>
+    <h1 class="p1">SISTEC JN</h1>
+    <h1 class="p1">SISTEC BN</h1>
+    <button onclick="countH1()">Count h1 tag using class name</button>
+
+    <script>
+        function countH1() {
+            const h1Elements = document.getElementsByClassName("p1");
+            alert("Number of h1 tags with class 'p1': " + h1Elements.length);
+        }
+    </script>
+</body>
+
+</html>

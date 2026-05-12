@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" size="30" onfocus="display()" id="a">
+    <br><br>
+    <input type="text" size="30" onfocus="display()" id="b">
+    <br><br>
+    <input type="text" size="30" onfocus="display()" id="c">
+    <br><br>
+    <input type="text" size="30" onfocus="display()" id="d">
+    <br><br>
+
+    <script>
+        function display() {
+            var info = {
+                name: "Arun",
+                course: "Cse - Ai-DS",
+                clg: "sistec",
+                add: "airport road GN bhopal"
+            }
+            a.value = info.name;
+            b.value = info.course;
+            c.value = info.clg;
+            d.value = info.add;
+        }
+    </script>
+
+</body>
+
+</html>

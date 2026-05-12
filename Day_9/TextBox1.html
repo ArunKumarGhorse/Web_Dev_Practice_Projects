@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: rgb(177, 219, 219);
+        }
+
+        button:hover {
+            background-color: aqua;
+            border-radius: 2px solid purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <label>Enter the value of a</label>
+        <br>
+        <input type="text" id="n1" placeholder="Enter the value of a">
+        <br><br>
+        <label>Enter the value of b</label>
+        <br>
+        <input type="text" id="n2" placeholder="Enter the value of 2">
+        <br><br>
+        <label>Enter the value of c</label>
+        <br>
+        <input type="text" id="n3" placeholder="Enter the value of c">
+        <br><br>
+        <button onclick="ADD()">ADD(+)</button>
+        <button onclick="sub()">SUB(-)</button>
+        <button onclick="multi()">MULTI(*)</button>
+        <!-- <label id="result"></label> -->
+        <input id="result">
+    </div>
+
+
+    <script>
+        function ADD() {
+            var x = parseInt(document.getElementById("n1").value);
+            var y = parseInt(document.getElementById("n2").value);
+            var z = parseInt(document.getElementById("n3").value);
+            var s = x + y + z;
+            document.getElementById("result").value = s;
+        }
+
+        function sub() {
+            var x = parseInt(document.getElementById("n1").value);
+            var y = parseInt(document.getElementById("n2").value);
+            var z = parseInt(document.getElementById("n3").value);
+            var s = x - y - z;
+            document.getElementById("result").value = s;
+        }
+        function multi() {
+            var x = parseInt(document.getElementById("n1").value);
+            var y = parseInt(document.getElementById("n2").value);
+            var z = parseInt(document.getElementById("n3").value);
+            var s = x * y * z;
+            document.getElementById("result").value = s;
+        }
+
+
+    </script>
+</body>
+
+</html>

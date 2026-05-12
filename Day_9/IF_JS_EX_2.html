@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #obox {
+            background-color: rgb(224, 224, 224);
+            margin-top: 20px;
+            border-radius: 3px solid black;
+            display: flex;
+            justify-content: center;
+            display: block;
+            padding-top: 15px;
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-bottom: 15px;
+            border-radius: 40px;
+        }
+
+        #inbox1 {
+            height: 40px;
+            border-radius: 40px;
+            padding-top: 15px;
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-bottom: 15px;
+            background-color: rgb(85, 220, 238);
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        #inbox2 {
+            height: 40px;
+            border-radius: 40px;
+            background-color: rgb(117, 225, 114);
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            padding-top: 15px;
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-bottom: 15px;
+        }
+
+        #inbox1:hover() {
+            box-shadow: 0cqi purple 3px;
+        }
+
+        button {
+            margin-left: 45%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="obox">
+        <div id="inbox1">
+            <label>Enter Num1</label>
+            <input type="text" id="n1" required>
+
+            <label>Enter Num2</label>
+            <input type="text" id="n2" required>
+
+            <label>Enter Num3</label>
+            <input type="text" id="n3" required>
+        </div>
+        <br><br>
+        <button onclick="ck()" onChange="ck(TouchList)"> Click Me!</button>
+
+
+    </div>
+
+    <script>
+        function ck() {
+            var a = parseInt(document.getElementById("n1").value);
+            var b = parseInt(document.getElementById("n2").value);
+            var c = parseInt(document.getElementById("n3").value);
+            if (a == b == c) {
+                alert("All Equal.")
+            }
+            else if (a > b && b > c) {
+                alert("a is greater.");
+            } else if (b > a && b > c) {
+                alert("b is greater.");
+            } else {
+                alert("c is greater.");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1 {
+            height: 200px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1" style="display:flex;">
+
+    </div>
+
+
+    <script>
+        var choice = 3;
+        switch (choice) {
+            case 1:
+                document.getElementById("d1").innerHTML = "<img src='/images/google.jpg' alt='Google Img'>";
+                break;
+            case 2:
+                document.getElementById("d1").innerHTML = "<img src='/images/microsoft.png' alt='Microsoft Img'>";
+                break;
+            case 3:
+                document.getElementById("d1").innerHTML = "<img src='/images/meta.png' alt='Meta Img'>";
+                break;
+            default:
+                document.getElementById("d1").innerHTML = "<h1>This is Default Choice</h1>";
+        }
+    </script>
+</body>
+
+</html>

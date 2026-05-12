@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" size="30" id="a" onfocus="display()">
+        <br><br>
+        <input type="text" size="30" id="b" onfocus="display()">
+    </form>
+
+    <script>
+        function display() {
+            var student = {
+                name: "A",
+                age: 21,
+            }
+            a.value = student.name;
+            b.value = student.age;
+        };
+    </script>
+</body>
+
+</html>

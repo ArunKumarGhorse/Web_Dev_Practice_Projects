@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        #id {
+            background-color: blueviolet;
+            color: rgb(36, 120, 148);
+            height: 100px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1"></div>
+    <script>
+        var dr = {
+            name: " Shah Rukh Khan",
+            age: 19,
+            sub1: 95,
+            sub2: 75,
+            sub3: 80,
+            sub4: 85,
+            sub5: 90
+        };
+        dr.total = dr.sub1 + dr.sub2 + dr.sub3 + dr.sub4 + dr.sub5;
+        dr.per = dr.total / 5;
+
+        document.write("Name: " + dr.name + "<br>");
+        document.write("Age: " + dr.age + "<br>");
+        document.write("Sub1: " + dr.sub1 + "<br>");
+        document.write("Sub2: " + dr.sub2 + "<br>");
+        document.write("Sub3: " + dr.sub3 + "<br>");
+        document.write("Sub4: " + dr.sub4 + "<br>");
+        document.write("Sub5: " + dr.sub5 + "<br>");
+        document.write("Total: " + dr.total + "<br>");
+        document.write("Percentage: " + dr.per + "<br>");
+
+        // window.alert("Name: " + dr.name + "\n" +
+        //     "Age: " + dr.age + "\n" +
+        //     "Sub1: " + dr.sub1 + "\n" +
+        //     "Sub2: " + dr.sub2 + "\n" +
+        //     "Sub3: " + dr.sub3 + "\n" +
+        //     "Sub4: " + dr.sub4 + "\n" +
+        //     "Sub5: " + dr.sub5 + "\n" +
+        //     "Total: " + dr.total + "\n" +
+        //     "Percentage: " + dr.per);
+
+        name = "Arun Ghorse";
+        document.getElementById("d1").innerHTML = name;
+    </script>
+
+</body>
+
+</html>

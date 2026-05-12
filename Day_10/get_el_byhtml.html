@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 class="p1">SISTEC GN</h1>
+    <h1 class="p1">SISTEC RB</h1>
+    <h1 class="p1">SISTEC JN</h1>
+    <h1 class="p1">SISTEC BN</h1>
+    <hr>
+    <h2 class="p2">h2</h2>
+    <h2 class="p2">h2</h2>
+    <hr>
+    <h3 class="p3">h3</h3>
+    <h3 class="p3">h3</h3>
+
+    <button onclick="countH2()">Count h tag using class name</button>
+
+
+    <script>
+
+        function countH1() {
+            const h1Elements = document.getElementsByClassName("p1");
+            prompt("Number of h1 tags with class 'p1': " + h1Elements.length);
+        }
+
+        function countH2() {
+            const h2Elements = document.getElementsByClassName("p2");
+            prompt("Number of h2 tags with class 'p2': " + h2Elements.length);
+        }
+
+        function countH3() {
+            const h3Elements = document.getElementsByClassName("p3");
+            prompt("Number of h3 tags with class 'p3': " + h3Elements.length);
+        }
+    </script>
+</body>
+
+</html>

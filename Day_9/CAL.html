@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        #ob {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #ib {
+            background-color: rgb(17, 202, 159);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgb(185, 75, 149);
+            text-align: center;
+        }
+
+
+        input {
+            width: 90%;
+            padding: 10px;
+            border-radius: 40px;
+            border: none;
+            margin: 10px 0;
+            background-color: rgb(187, 204, 255);
+        }
+
+        .ops button {
+            margin: 5px;
+            padding: 10px 15px;
+            border-radius: 20px;
+            background-color: aqua;
+        }
+
+        #ilb {
+            display: grid;
+            grid-template-columns: repeat(3, 70px);
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #ilb button {
+            padding: 15px;
+            height: 55px;
+            width: 55px;
+            border-radius: 50%;
+            background-color: rgb(230, 90, 185);
+        }
+    </style>
+
+</head>
+
+<body background="/images/bg.avif">
+
+    <div id="ob">
+        <div id="ib">
+            <h1>Calculator</h1>
+
+            <input type="number" id="num1" placeholder="Enter First Number" onclick="setfocus('num1')">
+            <input type="number" id="num2" placeholder="Enter Second Number" onclick="setfocus('num2')">
+
+            <div class="ops">
+                <button onclick="cal('+')">Add</button>
+                <button onclick="cal('-')">Sub</button>
+                <button onclick="cal('*')">Mul</button>
+                <button onclick="cal('/')">Div</button>
+            </div>
+
+
+            <div id="ilb">
+                <button onclick="appendNumber(1)">1</button>
+                <button onclick="appendNumber(2)">2</button>
+                <button onclick="appendNumber(3)">3</button>
+                <button onclick="appendNumber(4)">4</button>
+                <button onclick="appendNumber(5)">5</button>
+                <button onclick="appendNumber(6)">6</button>
+                <button onclick="appendNumber(7)">7</button>
+                <button onclick="appendNumber(8)">8</button>
+                <button onclick="appendNumber(9)">9</button>
+                <button onclick="appendNumber(0)">0</button>
+            </div>
+            <h3>Result: <span id="result"></span></h3>
+
+        </div>
+
+    </div>
+    <script>
+        let a = "num1";
+        function setfocus(inputId) {
+            a = inputId;
+        }
+
+        function appendNumber(number) {
+            document.getElementById(a).value += number;
+        }
+
+        function cal(operator) {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let result;
+
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num2 !== 0 ? num1 / num2 : "Error: Division by zero";
+                    break;
+            }
+
+            document.getElementById('result').textContent = result;
+        }
+    </script>
+</body>
+
+</html>

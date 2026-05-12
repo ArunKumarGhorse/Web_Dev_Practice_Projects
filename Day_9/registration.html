@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head><style>
+    #main{
+        background: linear-gradient(to right,grey,purple,#f775ea);
+    }
+    #container {
+    background: linear-gradient(to left, purple, hotpink);
+    height: 500px;
+    width: 500px;
+    border-radius: 30px;
+
+    margin: 80px auto;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    font-size: x-large;
+}
+     #t1{
+            margin: auto;
+            table {
+    border-spacing: 10px; 
+   }
+           }
+    #int{
+        border-radius:5px;
+        background-color: #f775ea;
+    }
+    #int:hover{
+        background-color:wheat;
+        color:solid black;
+    }
+    #int1{
+        border-radius:5px;
+        background-color: #f775ea;
+    }
+    #int1:hover{
+        background-color:wheat;
+        color:solid black;
+    }
+    #int2{
+        border-radius:5px;
+        background-color: #f775ea;
+    }
+    #int2:hover{
+        background-color:wheat;
+        color:solid black;
+    }
+    .btn{
+        background-color: salmon;
+    }
+    .btn:hover{
+        background-color: royalblue;
+        
+    }
+    td[colspan="2"] {
+    height: 80px;
+    vertical-align: middle;   
+    text-align: center;       
+}
+    
+   
+
+</style>
+
+<body id="main">
+    <div id="container" style="border: 2px solid black ; "><h1>Registration form</h1><div ><br>
+    <form id="t1" method="post" onsubmit="return check()">
+  <table>
+    
+    <tr>
+      <td>First name</td>  
+      <td>
+        <input id="int" type="text" placeholder="Enter Your Name" required>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Contact number</td>
+      <td>
+        <input id="int"  type="text" name="mobile" placeholder="Enter Contact Number" required>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Gender:</td>
+      <td>
+        <label>
+          <input id="int"  type="radio" name="gender" value="male"> Male
+        </label>
+        <label>
+          <input id="int"  type="radio" name="gender" value="female"> Female
+        </label>
+      </td>
+    </tr>
+
+    <tr>
+      <td>User Name</td>
+      <td>
+        <input id="int1"  type="text" placeholder="Enter User Name" required>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Password</td>
+      <td>
+        <input id="int2"  type="password1" placeholder="Password">
+      </td>
+    </tr>
+
+    <tr>
+      <td>Re Enter Password</td>
+      <td>
+        <input id="int2"  type="password" placeholder="Re-enter Password">
+      </td>
+    </tr>
+    <tr  >
+            <td colspan="2">
+            <button type="button" onclick="window.location.href='login.html'">Go to login</button>
+            <button class="btn"type="reset" class="btn btn-warning">clear</button>
+            
+            </td>
+    </tr>
+
+  </table>
+</form>   
+    </div>
+    </div>
+    <script>
+         
+function check() {
+    let name = document.getElementById("int1").value;
+    let pwd = document.getElementById("pwd").value;
+
+    let flag = 1;
+    let message = "";
+
+    let namePattern = /^[A-Za-z]+$/;
+
+    if (name == "") {
+        message += "Name required\n";
+        flag = 0;
+    } 
+    else if (!name.match(namePattern)) {
+        message += "Name should contain only letters\n";
+        flag = 0;
+    }
+
+    if (pwd == "") {
+        message += "Password is required\n";
+        flag = 0;
+    } 
+    else if (pwd.length < 8) {
+        message += "Password must be at least 8 characters\n";
+        flag = 0;
+    }
+
+    if (flag == 0) {
+        alert(message);  
+        return false;
+    }
+
+    return true;
+}
+</script>
+    </script>
+</body>
+</html>

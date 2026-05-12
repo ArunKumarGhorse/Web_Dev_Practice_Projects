@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1,
+        #d2,
+        #d3 {
+            height: 100px;
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        #d1:hover,
+        #d2:hover,
+        #d3:hover {
+            box-shadow: rgb(221, 50, 184) 0px 0px 10px;
+        }
+
+        #d1 {
+            background-color: rgb(231, 255, 13);
+            display: inline-block;
+        }
+
+        #d2 {
+            background-color: rgb(27, 55, 234);
+            display: inline-block;
+        }
+
+        #d3 {
+            background-color: rgb(106, 4, 111);
+            display: inline-block;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div style="align-items: center; display: flex; justify-content: center; flex-direction: row;">
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+    </div>
+
+
+    <script>
+        window.alert("Welcome to JavaScript");
+        document.getElementById("d1").innerHTML = "HTML";
+        document.getElementById("d2").innerHTML = "CSS";
+        document.getElementById("d3").innerHTML = "JavaScript";
+    </script>
+</body>
+
+</html>

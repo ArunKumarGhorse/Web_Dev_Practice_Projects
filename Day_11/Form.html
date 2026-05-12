@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #error {
+        color: red;
+    }
+</style>
+
+<body>
+    <br>
+    <div align="center">
+        <form method="post" onsubmit="return check()">
+            <h5 id="error"></h5>
+            <table align="center" border="2 solid">
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" id="name" name="name"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="pwd" id="pwd"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button>Submit</button></td>
+                </tr>
+
+            </table>
+        </form>
+    </div>
+    <script>
+        function check() {
+            let name = document.getElementById("name").value;
+            let pwd = document.getElementById("pwd").value;
+
+            let flag = 1;
+            let message = "";
+            let m = [];
+            let namep = /^[a-zA-Z ]+$/;
+            let pwdp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+            if (name == "") {
+                m[0] = "Name is required";
+                flag = 0;
+            } else if (!namep.test(name)) {
+                m[0] = "Name can only contain letters and spaces";
+                flag = 0;
+            } else {
+                m[0] = "";
+            }
+
+            if (pwd == "") {
+                m[1] = "Password is required";
+                flag = 0;
+            } else if (pwd.length < 8) {
+                m[1] = "Password must be at least 8 characters long";
+                flag = 0;
+            }
+            else if (!pwdp.test(pwd)) {
+                m[1] = "Password must contain at least one letter and one digit";
+                flag = 0;
+            } else {
+                m[1] = "";
+            }
+
+            if (flag == 0) {
+                for (let i = 0; i < m.length; i++) {
+                    message += m[i] + "<br>";
+                }
+            }
+
+            document.getElementById("error").innerHTML = message;
+
+            return flag === 1;
+        }
+    </script>
+</body>
+
+</html>

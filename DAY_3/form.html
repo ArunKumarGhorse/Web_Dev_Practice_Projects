@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+</head>
+
+<body>
+    <form method="post" action="script.html"
+        style="background-color: lightblue; width:50%;margin: auto; padding: 20px; border-radius: 10px;">
+        <fieldset>
+            <legend align="center" ;>
+                Registration Form
+            </legend>
+            <label> Enter your first name:</label>
+            <input type="text" name="username" placeholder="username eg. Arun" id="fname" required>
+            <br><br>
+            <label> Enter your last name:</label>
+            <input type="text" name="lastname" placeholder="lastname eg. Kumar" id="lname" required>
+            <br><br>
+            <label>Enter your Password:</label>
+            <input type="password" name="password" required>
+            <br><br>
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="Male" required>Male
+            <input type="radio" name="gender" value="Female" required>Female
+            <br><br>
+            <lable>Semester:</lable>
+            <input type="radio" name="semester" value="1st"> 1st sem
+            <input type="radio" name="semester" value="2nd"> 2nd sem
+            <input type="radio" name="semester" value="3rd"> 3rd sem
+            <input type="radio" name="semester" value="4th"> 4th sem
+            <!-- <input type="radio" name="semester" value="5th"> 5th sem
+            <input type="radio" name="semester" value="6th"> 6th sem
+            <input type="radio" name="semester" value="7th"> 7th sem
+            <input type="radio" name="semester" value="8th"> 8th sem -->
+
+            <br><br>
+            <label>Enter your address:</label>
+            <textarea rows="6" cols="25" name="Address" required>
+                Landmark:
+                Area:
+                City:
+                State:
+                Pincode:
+            </textarea>
+            <br><br>
+            <label>Select State</label>
+            <select name="state" id="state" required>
+                <option value="" selected disabled>Select State</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Haryana">Haryana</option>
+            </select>
+            <br><br>
+
+            <label>Select City</label>
+            <select name="city" id="city" required>
+                <option value="" selected disabled>Select City</option>
+                <option value="Bhopal">Bhopal</option>
+                <option value="Betul">Betul</option>
+                <option value="Indore">Indore</option>
+                <option value="Multai">Multai</option>
+            </select>
+
+            <br><br>
+            <label>Date Of Birth</label>
+            <input type="date" name="dob" required>
+
+            <br><br>
+            <label>Enter Currect time</label>
+            <input type="time" name="time" required>
+
+            <br><br>
+            <label>Upload your profile picture</label>
+            <input type="file" name="image" title="select your profile picture" required>
+
+            <br><br>
+            <lable>Skills</lable>
+            <input type="checkbox" name="skill_1" value="Python">Python
+            <input type="checkbox" name="skill_2" value="C++"> C++
+            <input type="checkbox" name="skill_3" value="Java">JAVA
+            <input type="checkbox" name="skill_4" value="Java Script">Java Script
+            <br><br>
+            <input type="reset" value="Clear all data">
+            <input type="submit" value="Sign Up">
+        </fieldset>
+    </form>
+</body>
+
+</html>

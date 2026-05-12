@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: rgb(14, 9, 9);
+        }
+
+        .btn:hover {
+            box-shadow: 0em 0em 1em rgb(244, 12, 167);
+            ;
+            border-style: groove;
+            box-shadow: 0em 0em 1em rgb(244, 12, 167);
+            ;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body id="db">
+    <div style="align-items: center; gap:30px; display: flex; justify-content: center; flex-wrap: wrap;">
+        <button class="btn" onclick="bgclr('RED')">red</button>
+        <button class="btn" onclick="bgclr('GREEN')">green</button>
+        <button class="btn" onclick="bgclr('BLUE')">blue</button>
+        <button class="btn" onclick="bgclr('YELLOW')">yellow</button>
+        <button class="btn" onclick="bgclr('PURPLE')">purple</button>
+        <button class="btn" onclick="bgclr('ORANGE')">orange</button>
+        <button class="btn" onclick="bgclr('PINK')">pink</button>
+        <button class="btn" onclick="bgclr('BLACK')">black</button>
+        <button class="btn" onclick="bgclr('WHITE')">white</button>
+        <button class="btn" onclick="bgclr('GRAY')">gray</button>
+    </div>
+
+    <script>
+        function bgclr(x) {
+            document.getElementById("db").style.backgroundColor = x;
+        }
+    </script>
+</body>
+
+</html>

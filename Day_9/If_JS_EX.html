@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <legend>Vote!</legend>
+        <label>Enter Your Age</label>
+        <input type="number" id="age"></inpiut>
+        <br><br>
+        <button onclick="ck()" onChange="ck(this)">Click Me !</button>
+    </form>
+
+
+    </form>
+    <script>
+
+        function ck() {
+            var age = parseInt(document.getElementById("age").value);
+            if (age >= 18) {
+
+                alert("Eligible for Vote " + age);
+            } else {
+                alert("Not Eligible for Vote " + age);
+            }
+        }
+    </script>
+</body>
+
+</html>
