@@ -72,19 +72,19 @@
 // }
 // console.log(ans);
 
-//8.
-let mark = [1, 2, 3, 4, 3, 4, 5];
-console.log("Before:", mark);
-for (let i = 0; i < mark.length; i++) {
-    let count = 0;
-    for (let j = 0; j < mark.length; j++) {
-        if (mark[i] == mark[j]) {
-            count++;
-        }
-    }
-    if (count > 1) {
-        mark.splice(i, 1);
-        i--;
-    }
-}
-console.log("After:", mark);
+//8. Remove the duplicate elements from the array
+// let mark = [1, 2, 3, 4, 3, 4, 5];
+// console.log("Before:", mark);
+// for (let i = 0; i < mark.length; i++) {
+//     let count = 0;
+//     for (let j = 0; j < mark.length; j++) {
+//         if (mark[i] == mark[j]) {
+//             count++;
+//         }
+//     }
+//     if (count > 1) {
+//         mark.splice(i, 1);
+//         i--;
+//     }
+// }
+// console.log("After:", mark);
