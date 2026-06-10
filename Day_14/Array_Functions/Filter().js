@@ -31,3 +31,16 @@
 // const newarr = products.filter(val => val.price > 25000);
 // console.log(newarr);
 
+// Task 6: Return users who know js
+// const users = [
+//     { name: "Arun", skills: ["JS", "React"] },
+//     { name: "Rahul", skills: ["Java"] },
+//     { name: "Aman", skills: ["JS", "Node"] }
+// ];
+// const newarr = users
+//     .filter(user => user.skills.includes("JS"))
+//     .map(user => user.name)
+
+// console.log(newarr);
+
+
