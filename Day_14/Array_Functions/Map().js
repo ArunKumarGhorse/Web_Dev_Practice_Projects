@@ -34,14 +34,35 @@
 // console.log(newarr);
 
 // Task 6: Add Property
-const users = [
-    { name: "Arun" },
-    { name: "Satish" }
-];
-users.forEach((user) => {
-    user.active = true;
-});
+// const users = [
+//     { name: "Arun" },
+//     { name: "Satish" }
+// ];
+// users.forEach((user) => {
+//     user.active = true;
+// });
 // users[0].age = "20";
 // users[1].age = "25";
+// console.log(users);
 
-console.log(users);
+// task 7: 18% GST on each element
+// const prices = [100, 200, 300];
+// const newprice = prices.map((value) => value + (value * (18 / 100)));
+// console.log(newprice);
+
+// Task 8:
+// const users = [
+//     { name: "Arun", active: true },
+//     { name: "Rahul", active: false },
+//     { name: "Aman", active: true }
+// ];
+
+// users.forEach((user) => {
+//     if (user.active == true) {
+//         console.log(user.name, "is active");
+//     } else {
+//         console.log(user.name, "is incative");
+//     }
+// });
+
+// filter() condition true hone wale elements ko new array me return karta hai.
