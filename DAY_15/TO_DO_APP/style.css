@@ -2,102 +2,312 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
 }
 
+
+
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+    color: #111827;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    transition: 0.3s ease;
 }
 
-#container {
-    width: 400px;
-    background-color: #ffffff;
+body.dark {
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+
+
+#mainContainer {
+    display: flex;
+    width: 1100px;
+    height: 650px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+
+#leftContainer {
+    flex: 0 0 30%;
+    background: rgb(169, 176, 255);
     padding: 25px;
-    border-radius: 15px;
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.15),
-        0 0 20px rgba(37, 99, 235, 0.1);
-    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e5e7eb;
+}
+
+/* Dark mode me bhi same rahega */
+body.dark #leftContainer {
+    background: rgb(169, 176, 255);
+    border-right: 1px solid #e5e7eb;
+}
+
+.black {
+    color: #111827;
+}
+
+.purple {
+    color: #7c3aed;
+}
+
+.stats {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    background: #f3f4f6;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+body.dark .card {
+    background: #f3f4f6;
+}
+
+.card h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #7c3aed;
+}
+
+.bottomMenu {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#darkModeBtn,
+#loginBtn {
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#darkModeBtn {
+    background: #111827;
+    color: white;
+}
+
+#loginBtn {
+    background: #7c3aed;
+    color: white;
+}
+
+#darkModeBtn:hover,
+#loginBtn:hover {
+    transform: translateY(-2px);
+}
+
+
+#container {
+    flex: 1;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+body.dark #container {
+    background: #1e293b;
+}
+
+
+
+.topBar,
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #1e3a8a;
+    color: #2563eb;
+    font-size: 22px;
+}
+
+#todayDate {
+    background: #eef2ff;
+    color: #7c3aed;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+
+
+#inputContainer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
 #input {
-    width: 100%;
+    flex: 1;
+    height: 45px;
     padding: 12px;
+    border-radius: 10px;
     border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    margin-bottom: 10px;
     outline: none;
+    transition: 0.3s;
 }
 
 #input:focus {
     border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }
 
-#addTask,
-#clearTasks {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    background-color: #2563eb;
+body.dark #input {
+    background: #0f172a;
     color: white;
-    border-radius: 8px;
+    border: 1px solid #334155;
+}
+
+#addTask {
+    height: 45px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
     cursor: pointer;
-    margin-bottom: 10px;
-    font-weight: bold;
     transition: 0.3s;
 }
 
-#addTask:hover,
-#clearTasks:hover {
-    background-color: #1d4ed8;
+#addTask:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+
+#taskContainer {
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 10px;
+    padding-right: 5px;
 }
 
 #task-list {
-    margin: 15px 0;
+    list-style: none;
 }
 
 #task-list li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px;
-    margin-bottom: 5px;
-    background: #f9f9f9;
-    border-radius: 6px;
+    padding: 14px;
+    margin-bottom: 10px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
-#task-list li button {
-    border: none;
-    background-color: #ef4444;
-    color: white;
-    padding: 6px 10px;
-    border-radius: 5px;
+#task-list li:hover {
+    transform: translateY(-2px);
+}
+
+body.dark #task-list li {
+    background: #334155;
+}
+
+#task-list li label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
     cursor: pointer;
-    margin-left: 5px;
 }
 
-#task-list li button:hover {
-    background-color: #dc2626;
-
+#task-list input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
 }
 
-#taskContainer {
-    max-height: 200px;
-    /* limit height */
-    overflow-y: auto;
-    /* enable vertical scroll */
-    border: 1px solid #ffffff;
-    margin-top: 10px;
-    padding: 10px;
+.done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
 
+#task-list li div {
+    display: flex;
+    gap: 8px;
+}
+
+#task-list li div button {
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-size: 12px;
+}
+
+#task-list li div button:first-child {
+    background: #f59e0b;
+}
+
+#task-list li div button:last-child {
+    background: #ef4444;
+}
+
+#task-list li div button:hover {
+    opacity: 0.85;
+}
+
+
+#clearTasks {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#clearTasks:hover {
+    background: #1d4ed8;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 10px;
 }

@@ -4,29 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO-DO-LLIST</title>
+    <title>TO-DO-LIST</title>
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <div id="container">
-        <div>
-            <div style="display: inline-block">
-                <h2 style="text-align: left;">Todo App</h2>
+    <div id="mainContainer">
+
+        <div id="leftContainer">
+
+            <h1>
+                <span class="black">📅Todo</span><span class="purple">ify</span>
+            </h1>
+
+            <hr>
+
+            <div class="stats">
+                <div class="card">
+                    <h3>Active Tasks</h3>
+                    <p id="activeCount">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Completed</h3>
+                    <p id="completedCount">0</p>
+                </div>
             </div>
-            <div id="mode" onclick="tg()" style="display: inline-block; align-items:right;"><button>🌙</button></div>
-        </div>
-        <input type="text" id="input" placeholder="Enter your task here">
-        <button id="addTask" onclick="addTask()">Add Task</button>
 
-        <div id="taskContainer">
-            <ol id="task-list"></ol>
+            <div class="bottomMenu">
+                <button id="darkModeBtn" onclick="toggleTheme()">🌙 Dark Mode</button>
+                <button id="loginBtn">Login / Register</button>
+            </div>
+
         </div>
 
-        <button id="clearTasks" onclick="clearTasks()">Clear All Tasks</button>
+
+
+        <div id="container">
+
+            <div id="header">
+                <h2>My Tasks ✰</h2>
+
+                <div id="mode" onclick="toggleTheme()">
+                    <button id="themeBtn">🌙</button>
+                </div>
+            </div>
+
+            <div id="inputContainer">
+                <input type="text" id="input" placeholder="Enter your task here">
+                <button id="addTask" onclick="addTask()">+ Add Task</button>
+            </div>
+
+            <div id="taskContainer">
+                <ol id="task-list"></ol>
+            </div>
+
+            <button id="clearTasks" onclick="clearTasks()">Clear All Tasks</button>
+
+        </div>
     </div>
 </body>
-
 
 </html>

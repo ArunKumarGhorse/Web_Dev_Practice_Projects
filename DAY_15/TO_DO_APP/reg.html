@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Smooth UI</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        /* 🌐 BACKGROUND */
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+        }
+
+        /* 📦 CARD */
+        .card {
+            width: 320px;
+            padding: 25px;
+            border-radius: 16px;
+
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+            transition: all 0.3s ease;
+        }
+
+        /* TITLE */
+        .card h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2563eb;
+        }
+
+        /* INPUT */
+        .card input {
+            width: 100%;
+            padding: 12px;
+
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+
+            outline: none;
+            margin-bottom: 12px;
+
+            transition: 0.2s;
+        }
+
+        .card input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        }
+
+        /* BUTTON */
+        .card button {
+            width: 100%;
+            padding: 12px;
+
+            border: none;
+            border-radius: 10px;
+
+            background: #2563eb;
+            color: white;
+
+            font-weight: 600;
+            cursor: pointer;
+
+            transition: 0.3s ease;
+        }
+
+        .card button:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        /* SMOOTH CARD HOVER */
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card">
+        <h2>Simple UI</h2>
+        <input type="text" placeholder="Enter something...">
+        <button>Submit</button>
+    </div>
+
+</body>
+
+</html>
