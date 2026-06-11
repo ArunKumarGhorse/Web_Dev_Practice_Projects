@@ -70,22 +70,34 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px;
-    margin-bottom: 8px;
-    background-color: #f8fafc;
-    border-radius: 8px;
-    border-left: 4px solid #2563eb;
+    padding: 8px;
+    margin-bottom: 5px;
+    background: #f9f9f9;
+    border-radius: 6px;
 }
 
 #task-list li button {
     border: none;
     background-color: #ef4444;
     color: white;
-    padding: 6px 12px;
+    padding: 6px 10px;
     border-radius: 5px;
     cursor: pointer;
+    margin-left: 5px;
 }
 
 #task-list li button:hover {
     background-color: #dc2626;
+
+}
+
+#taskContainer {
+    max-height: 200px;
+    /* limit height */
+    overflow-y: auto;
+    /* enable vertical scroll */
+    border: 1px solid #ffffff;
+    margin-top: 10px;
+    padding: 10px;
+
 }
